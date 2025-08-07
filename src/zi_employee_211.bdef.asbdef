@@ -1,0 +1,36 @@
+managed;
+//strict ( 2 );
+
+define behavior for ZI_EMPLOYEE_211 alias Employee
+persistent table zdt_employee_211
+lock master
+etag master last_changed_at
+
+
+{
+
+  field (mandatory : create) first_name, last_name, entry_date, annual_salary, currency_code;
+
+
+  field (readonly) employee_id;
+
+
+  create;
+  update;
+  delete;
+
+  // Mapeia os campos da sua CDS View para os campos da sua tabela de banco de dados.
+  mapping for zdt_employee_211
+  {
+
+    employee_id   = employee_id;
+    first_name    = first_name;
+    last_name     = last_name;
+    birth_date    = birth_date;
+    entry_date    = entry_date;
+    annual_salary = annual_salary;
+    currency_code = currency_code;
+    last_changed_at = last_changed_at;
+
+  }
+}

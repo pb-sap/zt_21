@@ -1,0 +1,62 @@
+@Metadata.layer: #CORE
+
+// O título agora usa um campo descritivo
+@UI.headerInfo: {
+  typeName: 'Funcionário',
+  typeNamePlural: 'Funcionários',
+  title: {
+    type: #STANDARD,
+    value: 'first_name'
+  }
+}
+
+annotate view ZC_EMPLOYEE_211 with
+{
+ 
+  
+
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+
+  /* Annotations for Field: first_name */
+
+  @UI.identification: [ { position: 10 } ]
+  @UI.lineItem: [ { position: 10 } ]
+  @UI.selectionField: [ { position: 10 } ]
+  first_name;
+
+  /* Annotations for Field: last_name */
+  @UI.identification: [ { position: 20 } ]
+  @UI.lineItem: [ { position: 20 } ]
+  @UI.selectionField: [ { position: 20 } ]
+  last_name;
+
+  /* Annotations for Field: birth_date */
+  @UI.identification: [ { position: 30 } ]
+  @UI.lineItem: [ { position: 30 } ]
+  @UI.selectionField: [ { position: 30 } ]
+  birth_date;
+
+  /* Annotations for Field: entry_date */
+  @UI.identification: [ { position: 35 } ]
+  @UI.lineItem: [ { position: 35 } ]
+  @UI.selectionField: [ { position: 50 } ]
+  entry_date;
+
+  /* Annotations for Field: annual_salary */
+  @UI.identification: [ { position: 40 } ]
+  @UI.lineItem: [ { position: 40 } ]
+  @UI.selectionField: [ { position: 40 } ]
+  annual_salary;
+
+  /* Annotations for Field: currency_code */
+  @UI.identification: [ { position: 60 } ]
+  @UI.lineItem: [ { position: 60 } ]
+  @UI.selectionField: [ { position: 60 } ]
+  currency_code;
+}

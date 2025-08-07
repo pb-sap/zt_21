@@ -1,0 +1,14 @@
+projection;
+
+// Habilitar o modo estrito é uma boa prática recomendada pela SAP
+//strict ( 2 );
+
+define behavior for ZC_EMPLOYEE_211 alias Employee
+// A palavra 'extensible' é opcional aqui, use se planeja estender o BO no futuro
+{
+  // 1. Delegamos as operações padrão para a camada de interface (ZI_)
+  // Isso é o equivalente ao seu exemplo.
+  use create;
+  use update;
+  use delete;
+}
